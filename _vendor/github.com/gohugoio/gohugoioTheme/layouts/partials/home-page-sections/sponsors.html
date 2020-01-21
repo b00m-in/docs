@@ -3,14 +3,14 @@
 {{ with .cx.Site.Data.sponsors }}
   <section class="{{ $.classes_section | default "bg-primary-color-dark b--dark-gray bb bt ph5 pv4 w-100"}}">
     <div class="center mw9"> 
-      <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
+      <h3 class="b f3 mv0 light-gray">M0V Uses</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         {{ range .banners }}
           {{ $banner := . }}
           {{if .logo}}
             <div class="{{$classes_box}} o-100">
               {{with .link -}}
-                {{ $url := printf "%s?%s" . (querify "utm_source" "homepage" "utm_medium" "banner" "utm_campaign" "hugosponsor") | safeURL }}
+                {{ $url := printf "%s?%s" . (querify "utm_source" "homepage" "utm_medium" "banner" "utm_campaign" "m0vsponsor") | safeURL }}
                 {{ if eq (getenv "HUGO_ENV") "production" | or (eq $.cx.Site.Params.env "production")  }}
                    {{ $gtagID := printf "Sponsor %s %s" $banner.name $gtag | title }}
                    <a href="{{ $url }}" onclick="trackOutboundLink({{ printf "'%s', '%s'" $gtagID $url | safeJS }}); return false;" class="grow">

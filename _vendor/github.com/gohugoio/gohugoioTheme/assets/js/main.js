@@ -2,7 +2,6 @@ import styles from './../css/main.css';
 import './anchorforid.js'
 import './clipboardjs.js'
 import './codeblocks.js'
-import './docsearch.js'
 import './lazysizes.js'
 import './menutoggle.js'
 import './scrolldir.js'

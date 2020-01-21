@@ -1,17 +1,17 @@
 [[banners]]
-name = "Forestry.io"
-link = "https://forestry.io/"
-logo = "/images/sponsors/forestry-logotype.svg"
+name = "Golang"
+link = "https://golang.org"
+logo = "/images/sponsors/gopher-side_color.svg"
 copy = ""
 
 [[banners]]
-name = "Linode"
-link = "https://www.linode.com/"
-logo = "/images/sponsors/linode-logo_standard_light_medium.png"
+name = "Kicad"
+link = "https://www.kicad-pcb.org/"
+logo = "/images/sponsors/kicad_logo_small.png"
 copy = ""
 
 [[banners]]
-name = "eSolia"
-link = "https://esolia.com/post/why-did-esolia-choose-hugo/"
-logo = "/images/sponsors/esolia-logo.svg"
+name = "Hugo"
+link = "https://gohugo.io/"
+logo = "/images/sponsors/gopher-hero.svg"
 copy = ""
