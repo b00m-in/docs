@@ -1,0 +1,25 @@
+
+description = "Proactive, predictive monitoring for O&M of PV Plants"
+## Used for views in rendered HTML (i.e., rather than using the .Hugo variable)
+release = "0.1"
+## Setting this to true will add a "noindex" to *EVERY* page on the site..
+removefromexternalsearch = false
+## Gh repo for site footer (include trailing slash)
+ghrepo = "https://github.com/m0v/m0v-docs"
+## GH Repo for filing a new issue
+github_repo = "https://github.com/m0v/m0v/issues/new"
+### Edit content repo (set to automatically enter "edit" mode; this is good for "improve this page" links)
+ghdocsrepo = "https://github.com/m0v/m0v-docs/tree/master/docs"
+## Gitter URL
+gitter = "https://gitter.im/m0v/m0v-docs"
+## Discuss Forum URL
+forum = "https://discourse.m0v.io/"
+## Google Tag Manager
+gtmid = ""
+
+# First one is picked as the Twitter card image if not set on page.
+images = ["images/m0v-title.png"]
+
+flex_box_interior_classes = "flex-auto w-100 w-40-l mr3 mb3 bg-white ba b--moon-gray nested-copy-line-height"
+
+#sidebar_direction = "sidebar_left"
