@@ -95,5 +95,5 @@ controlTask: handles button presses etc.
 otaTask
 
 [sntp]: https://e2e.ti.com/support/wireless-connectivity/wifi/f/968/t/829406?tisearch=e2e-quicksearch&keymatch=sntp
-[94fb658]: https://github.com/m0vin/m0v-device/
+[94fb658]: https://github.com/m0vin/m0v-cc3220s/
 [networking processor]: https://www.ti.com/lit/ug/swru455c.pdf

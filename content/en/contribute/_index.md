@@ -20,4 +20,4 @@ toc: false
 
 M0V relies heavily on the enthusiasm and participation of users, installers and developers. We need your support in both its development and documentation.
 
-M0V's contribution guidelines are [detailed in a `CONTRIBUTING.md`](https://github.com/m0vin/m0v/blob/master/CONTRIBUTING.md) in the M0V source repository on GitHub.
+M0V's contribution guidelines are [detailed in a `CONTRIBUTING.md`](https://github.com/m0vin/m0v-server/blob/master/CONTRIBUTING.md) in the M0V source repository on GitHub.

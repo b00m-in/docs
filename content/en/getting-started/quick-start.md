@@ -24,7 +24,7 @@ M0V is available for up-front purchase or as a subscription for grid tied PV sys
 
 ## Step 1: Register & Order
 
-* Register at [M0V](https://mov.in/register)
+* Register at [M0V](https://m0v.in/register)
 * Place order for 1 or more devices.
 
 ## Step 2: Download Provisioning App

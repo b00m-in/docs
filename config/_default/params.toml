@@ -7,7 +7,7 @@ removefromexternalsearch = false
 ## Gh repo for site footer (include trailing slash)
 ghrepo = "https://github.com/m0v/m0v-docs"
 ## GH Repo for filing a new issue
-github_repo = "https://github.com/m0v/m0v/issues/new"
+github_repo = "https://github.com/m0v/m0v-server/issues/new"
 ### Edit content repo (set to automatically enter "edit" mode; this is good for "improve this page" links)
 ghdocsrepo = "https://github.com/m0v/m0v-docs/tree/master/docs"
 ## Gitter URL

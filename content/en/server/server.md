@@ -23,10 +23,10 @@ A secure (tls) tcp server to receive status/meter readings with postgresql datab
 
 The server is one part of four:
 
-+ Data receipt server (this) - `locomov`
-+ Data retrieval server - `finisher`
-+ Device firmware - `provisioning_CC3220S_LAUNCHXL_tirtos_ccs`
-+ Android app software - `SimpleLink_WiFi_Provisioning_Android_Source_2.2.257`
++ Data receipt server/broker (this) - `locomov` [m0v-broker](https://github.com/m0vin/m0v-broker)
++ Data retrieval server - `finisher` [m0v-server](https://github.com/m0vinr/m0v-server)
++ Device firmware - `provisioning_CC3220S_LAUNCHXL_tirtos_ccs` [m0v-cc3220s](https://github.com/m0vin/m0v-cc3220s)
++ Android app software - `SimpleLink_WiFi_Provisioning_Android_Source_2.2.257` [mov-app-android](htps://github.com/m0vin/m0v-app-android)
 
 ### [Server](#server){#server}
 
@@ -44,7 +44,8 @@ Stdout/stderr is piped to a modified version of funnel which writes and rotates 
 #### [data](#data){#data}
 
 A packet sent from a device (publisher/pub) consists of:
-```
+
+{{< code file="db1.go" >}}
 Id int64 `json:"id!`
 Timestamp int64 `json:"timestamp,omitempty"`
 Status bool `json:"status"`
@@ -52,12 +53,13 @@ Voltage float64 `json:"voltage"`
 Frequency float64 `json:"freq"`
 //Lat float64 `json:"lat"`
 //Lng float64 `json:"lng"`
-```
+{{< /code >}}
+
 `Id` (should be `pub_id`) is the id of the pub which is set during configuration with app along with the location and other system info (tbc). 
 
 A packet saved to db is as follows with the `Timestamp` from the packet used as `created_at`:
 
-```
+{{< code file="pg-0.sql" >}}
 pub_id INTEGER NOT NULL REFERENCES pub(pub_id),
 id SERIAL PRIMARY KEY, 
 created_at TIMESTAMPTZ NOT NULL default current_timestamp,
@@ -65,7 +67,7 @@ saved_at TIMESTAMPTZ NOT NULL default current_timestamp,
 voltage REAL,
 frequency REAL,
 protected boolean NOT NULL,
-```
+{{< /code >}}
 
 `pub_id` is in the packet sent from a pub. `id` is an incrementing id of the packet saved to db. `created_at` is a timestamp 
 
@@ -84,8 +86,7 @@ The server accepts tokens from successfully provisioned devices and returns them
 + The device then connects to the cloud confirmation server and posts the token to confirm successful provisioning. 
 + The app then queries the cloud confirmation server for the token, upon receiving which the configuratiaon process is complete.  
 
-
-```
+{{< code file="db1.go" >}}
 type Confo struct {
     Devicename string`json:"deviceName"`
     Timestamp int64 `json:"timestamp,omitempty"`
@@ -93,7 +94,8 @@ type Confo struct {
     Hash int64 `json:"hash,omitempty"`
     Sub string `json:"email,omitempty"`
 }
-```
+{{< /code >}}
+
 On receiving a confo, the server does the following: 
 - check if `Sub` is known, i.e. registered email in `sub`
     - yes: check if `Hash` exists in `pub`
@@ -110,8 +112,6 @@ On receiving a confo, the server does the following:
 
 The confo gets saved anyway - either in `confo` or `cconfo`
 
-
-
 ### [Gotchas](#gotchas){#gotchas}
 
 The following files are for obvious reasons not part of the respository:
@@ -121,7 +121,6 @@ b00m.in+rsa
 b000m-trusted.chain.pem
 b00m-trusted-key.pem
 ```
-
 Certificate problems between client/server will usually result in an error on the server such as:
 
 ```
