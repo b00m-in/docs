@@ -1,5 +1,5 @@
 
-description = "Proactive, predictive monitoring for O&M of PV Plants"
+description = "Power. Control. Fun!"
 ## Used for views in rendered HTML (i.e., rather than using the .Hugo variable)
 release = "0.1"
 ## Setting this to true will add a "noindex" to *EVERY* page on the site..
@@ -18,7 +18,7 @@ forum = "https://discourse.m0v.io/"
 gtmid = ""
 
 # First one is picked as the Twitter card image if not set on page.
-images = ["images/m0v-title.png"]
+images = ["images/boom.png"]
 
 flex_box_interior_classes = "flex-auto w-100 w-40-l mr3 mb3 bg-white ba b--moon-gray nested-copy-line-height"
 

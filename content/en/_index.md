@@ -1,5 +1,5 @@
 ---
-title: "Gamifying O&M"
+title: "Gamify O&M"
 date: 2017-03-02T12:00:00-05:00
 features:
 
@@ -38,4 +38,4 @@ sections:
     copy: "M0V's Go-based templating provides just the right amount of logic to build anything from the simple to complex."
 ---
 
-M0V is the first free, open-source monitoring device for PV plants! With its predictive data analytics and leaderboards, M0V makes O&M fun!
+A free, open-source monitoring and control device for PV assets! B00M makes O&M fun!

@@ -7,7 +7,7 @@ footnotereturnlinkcontents = "↩"
 languageCode = "en-us"
 title = "M0V"
 
-googleAnalytics ="UA-23840640-2"
+#googleAnalytics ="UA-23840640-2"
 
 pluralizeListTitles = false
 

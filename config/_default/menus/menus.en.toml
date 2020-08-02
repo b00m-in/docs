@@ -53,6 +53,11 @@
 
 # LOW LEVEL ITEMS
 
+[[docs]]
+  name = "Learning"
+  weight = 40
+  identifier = "learning-resources"
+  url = "/learning/"
 
 [[docs]]
   name = "Troubleshooting"
