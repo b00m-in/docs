@@ -1,0 +1,62 @@
+{{ define "main" }}
+
+
+<link rel="stylesheet" type="text/css" href="/static/css/pi.css">
+<!--<link rel="stylesheet" type="text/css" href="/static/css/markup.css">-->
+<article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
+    
+    <h1>Pubs</h1>
+
+    <div class="pie-charts">
+        <div class="pieID--micro-skills pie-chart--wrapper">
+            <h2>Online</h2>
+            <div class="pie-chart">
+                <div class="pie-chart__pie">
+                    <div class="slice s0-0" style="transform: rotate(-1deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(0deg) translate3d(0px, 0px, 0px); background-color: olivedrab;"></span></div><div class="slice s0-1" style="transform: rotate(178deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-126.88deg) translate3d(0px, 0px, 0px); background-color: olivedrab;"></span></div><div class="slice s1-0" style="transform: rotate(230.12deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-50.12deg) translate3d(0px, 0px, 0px); background-color: crimson;"></span></div></div>
+                <ul class="pie-chart__legend">
+                    <li style="border-color: olivedrab;"><em>Online</em><span>642</span></li>
+                    <li style="border-color: crimson;"><em>Offline</em><span>358</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pieID--categories pie-chart--wrapper">
+            <h2>Status</h2>
+            <div class="pie-chart">
+                <div class="pie-chart__pie"><div class="slice s0-0" style="transform: rotate(-1deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(0deg) translate3d(0px, 0px, 0px); background-color: olivedrab;"></span></div><div class="slice s0-1" style="transform: rotate(178deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-81.52deg) translate3d(0px, 0px, 0px); background-color: olivedrab;"></span></div><div class="slice s1-0" style="transform: rotate(275.48deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-95.48deg) translate3d(0px, 0px, 0px); background-color: crimson;"></span></div></div>
+                    <ul class="pie-chart__legend">
+                        <li style="border-color: olivedrab;"><em>Protected</em><span>768</span></li>
+                        <li style="border-color: crimson;"><em>Unprotected</em><span>232</span></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="pieID--operations pie-chart--wrapper">
+            <h2>Power</h2>
+            <div class="pie-chart">
+                <div class="pie-chart__pie"><div class="slice s0-0" style="transform: rotate(-1deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-4.04deg) translate3d(0px, 0px, 0px); background-color: olivedrab;"></span></div><div class="slice s1-0" style="transform: rotate(173.96deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-122.84deg) translate3d(0px, 0px, 0px); background-color: orange;"></span></div><div class="slice s2-0" style="transform: rotate(230.12deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-101.6deg) translate3d(0px, 0px, 0px); background-color: crimson;"></span></div><div class="slice s3-0" style="transform: rotate(307.52deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-127.52deg) translate3d(0px, 0px, 0px); background-color: navy;"></span></div></div>
+                    <ul class="pie-chart__legend">
+                        <li style="border-color: olivedrab;"><em>Online grid up</em><span>645Kw</span></li>
+                        <li style="border-color: orange;"><em>Online grid down</em><span>156Kw</span></li>
+                        <li style="border-color: crimson;"><em>Offline</em><span>124Kw</span></li>
+                        <li style="border-color: navy;"><em>Dead</em><span>24Kw</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tdn" style="display:none;">pubs</div>
+    <table id="pubs" class="table">
+        <th>Rank</th><th>Hash</th><th>Longitude</th><th>Latitude</th><th>Created</th><th>Rated(Kwp)</th><th>Power(Kw)</th><th>Energy(Kwh)</th><th>Lifetime(Kwh)</th>
+        <!--<thead id = "thead">
+        </thead>-->
+        <tbody id = "tbody">
+
+        </tbody>
+    </table>
+
+    <script src="/static/lb.js" defer></script>
+    <script src="/static/pi.js" defer></script>
+
+</article>
+
+{{ end }}
