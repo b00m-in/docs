@@ -84,7 +84,7 @@ Also can choose compiler/linker options (CCS, GCC or IAR) in tirtos.mak
 
 ## Demos
 
-wlanconnect -s "M0V" -t WPA/WPA2 -p "53606808"
+wlanconnect -s "B00M" -t WPA/WPA2 -p "53606808"
 send -c 192.168.1.100 -n 1
 
 ## OOB

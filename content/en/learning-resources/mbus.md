@@ -1,7 +1,7 @@
 ---
 title: M-Bus
 linktitle: M-Bus
-description: M0V is an M-Bus master.
+description: B00M is an M-Bus master.
 date: 2020-01-18
 publishdate: 2020-01-18
 lastmod: 2020-01-18

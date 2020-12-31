@@ -1,7 +1,7 @@
 ---
-title: Contribute to M0V Development
+title: Contribute to B00M Development
 linktitle: Development
-description: M0V relies heavily on contributions from the open source community.
+description: B00M relies heavily on contributions from the open source community.
 date: 2019-02-01
 publishdate: 2019-02-01
 lastmod: 2019-02-01
@@ -32,11 +32,11 @@ This documentation layout is generated using [Hugo](https://gohugo.io)
 
 ## C
 
-C is still the most versatile language for embedded programming / firmware and all M0V device images are built using C and associated tools.
+C is still the most versatile language for embedded programming / firmware and all B00M device images are built using C and associated tools.
 
 ## Kicad / PCB Layout
 
-Kicad is a simple tool for electronic design. It has enough features to develop M0V's devices. 
+Kicad is a simple tool for electronic design. It has enough features to develop B00M's devices. 
 
 ## Java / Android development
 

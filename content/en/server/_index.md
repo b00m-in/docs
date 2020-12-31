@@ -1,7 +1,7 @@
 ---
-title: M0V Server
+title: B00M Server
 linktitle: Server overview
-description: M0V's server features.
+description: B00M's server features.
 date: 2020-01-13
 publishdate: 2020-01-13
 lastmod: 2020-01-13

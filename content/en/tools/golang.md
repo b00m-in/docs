@@ -1,7 +1,7 @@
 ---
 title: Golang
 linktitle: Golang
-description: Using Golang for M0V.
+description: Using Golang for B00M.
 date: 2020-01-01
 publishdate: 2020-01-01
 lastmod: 2020-01-01

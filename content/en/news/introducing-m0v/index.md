@@ -1,6 +1,6 @@
 ---
 date: 2020-01-13
-title: "Introducing M0V"
+title: "Introducing B00M"
 description: "Hardware, software and data platform for monitoring and control of photo-voltaic systems."
 categories: [blog]
 author: rcs

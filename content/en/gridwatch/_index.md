@@ -1,5 +1,5 @@
 ---
 title: "Gridwatch"
-layout: map-display
-aliases: [/gridwatch/]
+layout: pub-display
+aliases: [/gridwatch]
 ---

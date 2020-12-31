@@ -1,6 +1,6 @@
 ---
 title: ESP Firmware
-description: M0V ESP Firmware
+description: B00M ESP Firmware
 date: 2020-01-16
 layout: single
 keywords: ["firmware", "esp"]

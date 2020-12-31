@@ -1,7 +1,7 @@
 ---
-title: About M0V
+title: About B00M
 linktitle: Overview
-description: M0V's features, roadmap, license, and motivation.
+description: B00M's features, roadmap, license, and motivation.
 date: 2020-01-13
 publishdate: 2020-01-13
 lastmod: 2020-01-13
@@ -17,4 +17,4 @@ aliases: [/about-m0v/,/docs/]
 toc: false
 ---
 
-M0V makes O&M fun! 
+B00M makes O&M fun! 

@@ -1,7 +1,7 @@
 ---
 title: Vision
 linktitle: Vision
-description: Not so random ideas about future of M0V.
+description: Not so random ideas about future of B00M.
 date: 2020-01-13
 publishdate: 2020-01-13
 lastmod: 2020-01-13
@@ -32,9 +32,9 @@ A roof is an exposed, inaccessible surface which makes maintenance difficult whe
 
 ##  Appliance Control
 
-A net-meter at the grid-interconnection point allows more captive consumption by switching on/off loads as production increases/decreases. Appliances (like pumps and washing machines) need to be either retro-fitted or built with some ability to communicate with a gateway-like device (M0V). Ideally communication with appliances is also via low cost PLC modems to avoid expensive radios. 
+A net-meter at the grid-interconnection point allows more captive consumption by switching on/off loads as production increases/decreases. Appliances (like pumps and washing machines) need to be either retro-fitted or built with some ability to communicate with a gateway-like device (B00M). Ideally communication with appliances is also via low cost PLC modems to avoid expensive radios. 
 
-An appliance like a washing machine is loaded in the morning and set to `Ready` by a user. The appliance then communicates its readiness to M0V and receives a message to switch on when optimal. After the load is done, it then goes back to a `Sleep` mode and ignores any further message to switch on unless reset to `Ready` by a user.  
+An appliance like a washing machine is loaded in the morning and set to `Ready` by a user. The appliance then communicates its readiness to B00M and receives a message to switch on when optimal. After the load is done, it then goes back to a `Sleep` mode and ignores any further message to switch on unless reset to `Ready` by a user.  
 
 ## Weather stations
 

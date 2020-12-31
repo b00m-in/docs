@@ -1,7 +1,7 @@
 ---
-title: Join the M0V team
+title: Join the B00M team
 linktitle: Join in
-description: M0V needs developers
+description: B00M needs developers
 date: 2019-02-01
 publishdate: 2019-02-01
 lastmod: 2019-02-01
@@ -18,7 +18,7 @@ draft: false
 toc: true
 ---
 
-If you have any experience in any of the [tools]() and would like to get involved we're always looking to hire new collaborators. We're a remote only team with twice-a-year gatherings in scenic locations.
+If you have any experience in any of the [tools][] and would like to get involved we're always looking to hire new collaborators. We're a remote only team with twice-a-year gatherings in scenic locations.
 
 ## Git 
 
@@ -40,4 +40,4 @@ If you're comfortable in C, we can collaborate on the firmware. Also if you're k
 
 If you have or would like to enhance your skills with Kicad / LTSpice (electronic design and simulation) in general, we'll be able to use your skills and assist you enhancing them. 
 
-[tools]: /contribute/development
+[tools]: /tools

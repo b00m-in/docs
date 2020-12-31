@@ -16,4 +16,4 @@ aliases: [/firmware/ti]
 toc: false
 ---
 
-M0V's TI firmware on CC3220s/CC3235s
+B00M's TI firmware on CC3220s/CC3235s

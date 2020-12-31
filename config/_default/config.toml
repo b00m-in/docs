@@ -1,11 +1,11 @@
-baseURL = "https://m0v.in/"
+baseURL = "https://b00m.in/"
 paginate = 100
 defaultContentLanguage = "en"
 enableEmoji = true
 # Set the unicode character used for the "return" link in page footnotes.
 footnotereturnlinkcontents = "↩"
 languageCode = "en-us"
-title = "M0V"
+title = "B00M"
 
 #googleAnalytics ="UA-23840640-2"
 
@@ -70,7 +70,7 @@ weight = 10
 pattern = "2006"
 
 [social]
-twitter = "GoHugoIO"
+twitter = "B00min"
 
 
 # MARKDOWN

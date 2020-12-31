@@ -1,7 +1,7 @@
 ---
 title: Postgresql
 linktitle: Postgresql
-description: Using Postgresql for M0V.
+description: Using Postgresql for B00M.
 date: 2020-01-01
 publishdate: 2020-01-01
 lastmod: 2020-01-26
@@ -18,4 +18,4 @@ aliases: []
 toc: true
 ---
 
-M0V's server uses Postgresql as database. 
+B00M's server uses Postgresql as database. 

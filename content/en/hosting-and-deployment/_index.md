@@ -17,4 +17,4 @@ aliases: []
 toc: false
 ---
 
-You can host M0V server virtually anywhere. The following represent only a few of the more popular hosting and automated deployment solutions used by M0V.
+You can host B00M server virtually anywhere. The following represent only a few of the more popular hosting and automated deployment solutions used by B00M.

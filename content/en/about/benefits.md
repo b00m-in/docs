@@ -1,6 +1,6 @@
 ---
 title: O&M Use Cases
-linktitle: Use cases of M0V
+linktitle: Use cases of B00M
 description: Improved performance, peace of mind are just a few of the reasons remote monitoring is essential.
 date: 2020-01-13
 publishdate: 2020-01-13

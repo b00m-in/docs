@@ -1,7 +1,7 @@
 ---
 title: Apache License
 linktitle: License
-description: M0V is released under the Apache 2.0 license.
+description: B00M is released under the Apache 2.0 license.
 date: 2019-02-01
 publishdate: 2019-02-01
 lastmod: 2019-03-02
@@ -18,7 +18,7 @@ toc: true
 ---
 
 {{% note %}}
-M0V is released under the Apache 2.0 license.
+B00M is released under the Apache 2.0 license.
 {{% /note %}}
 
 _Version 2.0, January 2004_ <br>

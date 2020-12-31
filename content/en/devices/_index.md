@@ -1,7 +1,7 @@
 ---
 title: Devices
 linktitle: Devices Overview
-description: M0V devices are simple to configure and enable continuous development with OTA updates.
+description: B00M devices are simple to configure and enable continuous development with OTA updates.
 date: 2020-01-13
 publishdate: 2020-01-13
 lastmod: 2020-01-13

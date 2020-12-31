@@ -1,7 +1,7 @@
 ---
 title: Kicad
 linktitle: Kicad
-description: Using Kicad for M0V.
+description: Using Kicad for B00M.
 date: 2020-01-22
 publishdate: 2020-01-01
 lastmod: 2019-08-11
