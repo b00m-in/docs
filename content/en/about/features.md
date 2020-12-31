@@ -1,7 +1,7 @@
 ---
-title: M0V Features
-linktitle: M0V Features
-description: M0V boasts persistent connectivity to scalable servers.
+title: B00M Features
+linktitle: B00M Features
+description: B00M boasts persistent connectivity to scalable servers.
 date: 2020-01-13
 publishdate: 2020-01-13
 lastmod: 2020-01-13

@@ -1,7 +1,7 @@
 ---
 title: Android Dev
 linktitle: Android Dev
-description: Setup Android for development of M0V app.
+description: Setup Android for development of B00M app.
 date: 2020-19-01
 publishdate: 2020-19-01
 lastmod: 2020-19-01
@@ -18,7 +18,7 @@ aliases: []
 toc: true
 ---
 
-M0V uses an Android app for provisioning of devices and display of data.  Get started with Android development for M0V. 
+B00M uses an Android app for provisioning of devices and display of data.  Get started with Android development for B00M. 
 
 ## Brief 
 Setup Android & Gradle for development without Android Studio or any other IDE. 

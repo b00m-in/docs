@@ -1,7 +1,7 @@
 ---
 title: OTA Updates
 linktitle: OTA Updates
-description: M0V supports OTA updates of device firmware.
+description: B00M supports OTA updates of device firmware.
 date: 2020-01-18
 publishdate: 2020-01-18
 lastmod: 2020-01-18

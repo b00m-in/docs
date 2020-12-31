@@ -1,7 +1,7 @@
 ---
 title: Provisioning App
 linktitle: App Overview
-description: M0V's app makes the devices very easy to install.
+description: B00M's app makes the devices very easy to install.
 date: 2020-01-13
 publishdate: 2020-01-13
 lastmod: 2020-01-13
@@ -17,4 +17,4 @@ aliases: [/m0v-app/,/docs/]
 toc: false
 ---
 
-M0V makes O&M fun! 
+B00M makes O&M fun! 

@@ -1,7 +1,7 @@
 ---
 title: Smart Config
 linktitle: Smart Config
-description: M0V uses TI's SmartConfig provisioning.
+description: B00M uses TI's SmartConfig provisioning.
 date: 2020-01-18
 publishdate: 2020-01-18
 lastmod: 2020-01-18
@@ -25,7 +25,7 @@ The device starts up in [AP][] mode and receives from the mobile app the SSID/pa
 
 ### SmartConfig
 
-SmartConfig is a specific type of provisioning which is used in M0V only if the provisioning process as described above fails for whatever reason (usually because of the WiFi router blocking broadcasts). In SmartConfig, the device listens to communication between the mobile phone and the WiFi router and retrieves the SSID/password of the WiFi router using a [covert channel][].   
+SmartConfig is a specific type of provisioning which is used in B00M only if the provisioning process as described above fails for whatever reason (usually because of the WiFi router blocking broadcasts). In SmartConfig, the device listens to communication between the mobile phone and the WiFi router and retrieves the SSID/password of the WiFi router using a [covert channel][].   
 
 ### [Components](#components){#components}
 
@@ -49,7 +49,7 @@ public class DeviceConfiguration extends Fragment {
         public void addProfileCompleted() {
             connectToWifi (ssidToAdd) ... 
                 public void successfullyConnectedToNetwork(String ssid) {
-                    // *2 [c.t.s.DeviceConfiguration]-[1442] *AP* Connected to SSID in profile added to SL device: "M0V". Searching for new SL devices in the local network for cfg verification: Activating Ping Bcast + UDPBcastServer + mDNS discovery
+                    // *2 [c.t.s.DeviceConfiguration]-[1442] *AP* Connected to SSID in profile added to SL device: "B00M". Searching for new SL devices in the local network for cfg verification: Activating Ping Bcast + UDPBcastServer + mDNS discovery
                     ((MainActivity) getActivity()).restartUdp();
                 }
         }
@@ -117,12 +117,12 @@ android {
 ""2019-06-01 13:48:47,959 INFO  [c.t.s.u.ScanResultsPopUpView]-[610] *AP* Starting to retrieve list of access points SSIDs from SL device, for a list of available access points to choose from to send to SL device as profile to connect to
 ""2019-06-01 13:48:48,075 INFO  [c.t.s.u.ScanResultsPopUpView]-[612] *AP* Got SL device version with value: R2
 ""2019-06-01 13:48:48,077 INFO  [c.t.s.u.NetworkUtil]-[743] *AP* Getting list of available access points from SL device, from url: http://mysimplelink.net/netlist.txt
-""2019-06-01 13:48:48,114 INFO  [c.t.s.u.NetworkUtil]-[759] *AP* Got netlist with results: 2M0V;2Beautiful Offices WiFi;2Beautiful Offices WiFi;2PlusnetWirelessC0548F;2Beautiful Offices WiFi;2bs_wifi;0National Express Coach;0airtame-oob-U8vGkd;2PlusnetWirelessC054F1;2Beautiful Offices WiFi;2BS_WIFI;2Michelle;0National Express Coach;X;X;X;X;X;X;X;X;X;X;X;X;X;X;X;X;X;
-""2019-06-01 13:48:48,115 INFO  [c.t.s.u.ScanResultsPopUpView]-[615] *AP* Got list of networks: [2M0V, 2Beautiful Offices WiFi, 2Beautiful Offices WiFi, 2PlusnetWirelessC0548F, 2Beautiful Offices WiFi, 2bs_wifi, 0National Express Coach, 0airtame-oob-U8vGkd, 2PlusnetWirelessC054F1, 2Beautiful Offices WiFi, 2BS_WIFI, 2Michelle, 0National Express Coach]
-""2019-06-01 13:48:48,116 INFO  [c.t.s.u.ScanResultsPopUpView]-[621] *AP* duplicate SSIDs removed list of networks: [2M0V, 2Beautiful Offices WiFi, 2PlusnetWirelessC0548F, 2bs_wifi, 0National Express Coach, 0airtame-oob-U8vGkd, 2PlusnetWirelessC054F1, 2BS_WIFI, 2Michelle]
-""2019-06-01 13:48:48,117 INFO  [c.t.s.u.ScanResultsPopUpView]-[661] scan result list: [M0V, Beautiful Offices WiFi, PlusnetWirelessC0548F, bs_wifi, National Express Coach, airtame-oob-U8vGkd, PlusnetWirelessC054F1, BS_WIFI, Michelle]
+""2019-06-01 13:48:48,114 INFO  [c.t.s.u.NetworkUtil]-[759] *AP* Got netlist with results: 2B00M;2Beautiful Offices WiFi;2Beautiful Offices WiFi;2PlusnetWirelessC0548F;2Beautiful Offices WiFi;2bs_wifi;0National Express Coach;0airtame-oob-U8vGkd;2PlusnetWirelessC054F1;2Beautiful Offices WiFi;2BS_WIFI;2Michelle;0National Express Coach;X;X;X;X;X;X;X;X;X;X;X;X;X;X;X;X;X;
+""2019-06-01 13:48:48,115 INFO  [c.t.s.u.ScanResultsPopUpView]-[615] *AP* Got list of networks: [2B00M, 2Beautiful Offices WiFi, 2Beautiful Offices WiFi, 2PlusnetWirelessC0548F, 2Beautiful Offices WiFi, 2bs_wifi, 0National Express Coach, 0airtame-oob-U8vGkd, 2PlusnetWirelessC054F1, 2Beautiful Offices WiFi, 2BS_WIFI, 2Michelle, 0National Express Coach]
+""2019-06-01 13:48:48,116 INFO  [c.t.s.u.ScanResultsPopUpView]-[621] *AP* duplicate SSIDs removed list of networks: [2B00M, 2Beautiful Offices WiFi, 2PlusnetWirelessC0548F, 2bs_wifi, 0National Express Coach, 0airtame-oob-U8vGkd, 2PlusnetWirelessC054F1, 2BS_WIFI, 2Michelle]
+""2019-06-01 13:48:48,117 INFO  [c.t.s.u.ScanResultsPopUpView]-[661] scan result list: [B00M, Beautiful Offices WiFi, PlusnetWirelessC0548F, bs_wifi, National Express Coach, airtame-oob-U8vGkd, PlusnetWirelessC054F1, BS_WIFI, Michelle]
 ""2019-06-01 13:48:59,684 INFO  [c.t.s.u.ScanResultsPopUpView]-[345] Chosen SSID from list to send to SL device in profile to connect to: 
-SSID: M0V
+SSID: B00M
 PASS LEN: 8
 SECURITY: WPA2
 ""2019-06-01 13:48:59,740 INFO  [c.t.s.u.NetworkUtil]-[129] Network state: 1
@@ -131,7 +131,7 @@ SECURITY: WPA2
 ***
 Send
 SL device name: Movprov
-SSID to add: M0V
+SSID to add: B00M
 Pass len: 8
 ***
 ""2019-06-01 13:49:06,026 INFO  [c.t.s.DeviceConfiguration]-[1389] *AP* Wifi profile addition to SL device in progress, msg: Set a new device name Movprov
@@ -140,11 +140,11 @@ Pass len: 8
 ""2019-06-01 13:49:07,046 INFO  [c.t.s.DeviceConfiguration]-[1389] *AP* Wifi profile addition to SL device in progress, msg: Starting configuration verification
 ""2019-06-01 13:49:07,558 INFO  [c.t.s.DeviceConfiguration]-[1417] *AP* Wifi profile addition to SL device completed successfully
 ""2019-06-01 13:49:07,563 INFO  [c.t.s.DeviceConfiguration]-[1418] *AP* Requested SL device restart and move state to STA for cfg verification
-""2019-06-01 13:49:07,567 INFO  [c.t.s.DeviceConfiguration]-[1434] *AP* Connecting to "M0V" in order to obtain cfg verification
-""2019-06-01 13:49:07,594 INFO  [c.t.s.u.WifiNetworkUtils]-[138] Connecting (Lollipop and up) to "M0V" With Timer: true
+""2019-06-01 13:49:07,567 INFO  [c.t.s.DeviceConfiguration]-[1434] *AP* Connecting to "B00M" in order to obtain cfg verification
+""2019-06-01 13:49:07,594 INFO  [c.t.s.u.WifiNetworkUtils]-[138] Connecting (Lollipop and up) to "B00M" With Timer: true
 ""2019-06-01 13:49:07,601 INFO  [c.t.s.u.WifiNetworkUtils]-[141] Disconnect: true
 ""2019-06-01 13:49:07,808 INFO  [c.t.s.u.WifiNetworkUtils]-[148] found config in list - connect from list
-""2019-06-01 13:49:07,810 INFO  [c.t.s.u.WifiNetworkUtils]-[149] Connecting to ""M0V"" from list
+""2019-06-01 13:49:07,810 INFO  [c.t.s.u.WifiNetworkUtils]-[149] Connecting to ""B00M"" from list
 ""2019-06-01 13:49:07,876 INFO  [c.t.s.u.WifiNetworkUtils]-[178] Starting wifi connection short timer (40000ms)
 ""2019-06-01 13:49:07,882 INFO  [c.t.s.u.WifiNetworkUtils]-[225] State: DISCONNECTED Network:"null"
 ""2019-06-01 13:49:08,234 INFO  [c.t.s.u.WifiNetworkUtils]-[225] State: CONNECTED Network:"mobile.o2.co.uk"
@@ -157,9 +157,9 @@ Pass len: 8
 ""2019-06-01 13:49:11,085 INFO  [c.t.s.MainActivity]-[814] SL Dev found PB: {"name":"Movprov","host":"192.168.1.101","age":0}
 ""2019-06-01 13:49:11,286 INFO  [c.t.s.u.NetworkUtil]-[129] Network state: 1
 ""2019-06-01 13:49:11,302 INFO  [c.t.s.u.WifiNetworkUtils]-[225] State: CONNECTED Network:"null"
-""2019-06-01 13:49:11,353 INFO  [c.t.s.u.WifiNetworkUtils]-[241] Connected to desired network: "M0V"
+""2019-06-01 13:49:11,353 INFO  [c.t.s.u.WifiNetworkUtils]-[241] Connected to desired network: "B00M"
 ""2019-06-01 13:49:11,356 ERROR [c.t.s.u.WifiNetworkUtils]-[381] We are in WIFI
-""2019-06-01 13:49:11,358 INFO  [c.t.s.DeviceConfiguration]-[1442] *AP* Connected to SSID in profile added to SL device: "M0V". Searching for new SL devices in the local network for cfg verification: Activating Ping Bcast + UDPBcastServer + mDNS discovery
+""2019-06-01 13:49:11,358 INFO  [c.t.s.DeviceConfiguration]-[1442] *AP* Connected to SSID in profile added to SL device: "B00M". Searching for new SL devices in the local network for cfg verification: Activating Ping Bcast + UDPBcastServer + mDNS discovery
 ""2019-06-01 13:49:11,368 INFO  [c.t.s.MainActivity]-[276] UDPBcastServer - restarted
 ""2019-06-01 13:49:11,376 INFO  [c.t.s.u.NetworkUtil]-[129] Network state: 1
 ""2019-06-01 13:49:12,019 INFO  [c.t.s.u.UdpBcastServer]-[139] Bcast SL dev found to app, name: Movprov

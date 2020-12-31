@@ -1,7 +1,7 @@
 ---
 title: Gamify O&M
 linktitle: Gamify
-description: M0V's Leaderboard and Giveaways.
+description: B00M's Leaderboard and Giveaways.
 date: 2020-01-13
 publishdate: 2020-01-13
 lastmod: 2020-01-13
@@ -17,4 +17,4 @@ aliases: [/gamify/,/m0v-gamify/]
 toc: false
 ---
 
-M0V makes O&M fun! 
+B00M makes O&M fun! 

@@ -1,11 +1,11 @@
-baseURL = "https://m0v.in/"
+baseURL = "https://b00m.in/"
 paginate =  100
 defaultContentLanguage = "en"
 enableEmoji = true
 # Set the unicode character used for the "return" link in page footnotes.
 footnotereturnlinkcontents = "↩"
 languageCode = "en-us"
-title = "M0V"
+title = "B00M"
 
 #googleAnalytics = "UA-7131036-4"
 
@@ -56,7 +56,7 @@ weight = 10
 pattern = "2006"
 
 [social]
-twitter = "GoHugoIO"
+twitter = "B00MIN"
 
 #CUSTOM PARAMS
 [params]
@@ -72,9 +72,9 @@ twitter = "GoHugoIO"
   ### Edit content repo (set to automatically enter "edit" mode; this is good for "improve this page" links)
   ghdocsrepo = "https://github.com/m0vin/m0v-docs/tree/master/docs"
   ## Gitter URL
-  gitter = "https://gitter.im/m0v/m0v"
+  ## gitter = "https://gitter.im/m0v/m0v"
   ## Discuss Forum URL
-  forum = "https://discourse.m0v.io/"
+  ## forum = "https://discourse.m0v.io/"
   ## Google Tag Manager
   gtmid = ""
 

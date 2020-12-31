@@ -1,4 +1,4 @@
 ---
-title: "M0V News"
+title: "B00M News"
 aliases: [/release-notes/]
 ---

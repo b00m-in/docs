@@ -1,5 +1,5 @@
 [[docs]]
-  name = "About M0V"
+  name = "About B00M"
   weight = 1
   identifier = "about"
   url = "/about/"
@@ -27,19 +27,19 @@
   url = "/devices/"
 
 [[docs]]
-  name = "M0V TI Firmware"
+  name = "B00M TI Firmware"
   weight = 22
   identifier = "firmware_ti"
   url = "/firmware/ti/"
 
 [[docs]]
-  name = "M0V ESP Firmware"
+  name = "B00M ESP Firmware"
   weight = 25
   identifier = "firmware_esp"
   url = "/firmware/esp/"
 
 [[docs]]
-  name = "M0V Server"
+  name = "B00M Server"
   weight = 30
   identifier = "server"
   url = "/server/"
@@ -106,7 +106,7 @@
     url = "/tags/fundamentals/"
 
 
-######## GLOBAL ITEMS TO BE SHARED WITH THE m0v SITES
+######## GLOBAL ITEMS TO BE SHARED WITH THE B00M SITES
 
 [[global]]
     name = "News"
@@ -139,7 +139,7 @@
     icon = true
     identifier = "community"
     post = "external"
-    url = "/community"
+    url = "https://groups.google.com/g/b00min"
 
 
   [[global]]

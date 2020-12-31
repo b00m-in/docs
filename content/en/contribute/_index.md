@@ -1,7 +1,7 @@
 ---
-title: Contribute to M0V
-linktitle: Contribute to M0V
-description: Contribute to M0V development and documentation.
+title: Contribute to B00M
+linktitle: Contribute to B00M
+description: Contribute to B00M development and documentation.
 date: 2020-01-13
 publishdate: 2020-01-13
 lastmod: 2020-01-13
@@ -18,6 +18,6 @@ aliases: [/tutorials/how-to-contribute-to-m0v/,/community/contributing/]
 toc: false
 ---
 
-M0V relies heavily on the enthusiasm and participation of users, installers and developers. We need your support in both its development and documentation.
+B00M relies heavily on the enthusiasm and participation of users, installers and developers. We need your support in both its development and documentation.
 
-M0V's contribution guidelines are [detailed in a `CONTRIBUTING.md`](https://github.com/m0vin/m0v-server/blob/master/CONTRIBUTING.md) in the M0V source repository on GitHub.
+B00M's contribution guidelines are [detailed in a `CONTRIBUTING.md`](https://github.com/m0vin/m0v-server/blob/master/CONTRIBUTING.md) in the B00M source repository on GitHub.

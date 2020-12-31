@@ -1,7 +1,7 @@
 ---
-title: Contribute to M0V Docs
+title: Contribute to B00M Docs
 linktitle: Documentation
-description: Documentation is an integral part of any open source project. The M0V docs are as much a work in progress as the source it attempts to cover.
+description: Documentation is an integral part of any open source project. The B00M docs are as much a work in progress as the source it attempts to cover.
 date: 2019-02-01
 publishdate: 2019-02-01
 lastmod: 2019-02-01

@@ -1,7 +1,7 @@
 ---
 title: User Manual
 linktitle: User Manual
-description: M0V provisioing apps make the devices very easy to  install.
+description: B00M provisioing apps make the devices very easy to  install.
 date: 2020-01-18
 publishdate: 2020-01-18
 lastmod: 2020-01-18

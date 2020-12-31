@@ -1,6 +1,6 @@
 ---
 title: Security Features
-description: A summary of M0V's security features.
+description: A summary of B00M's security features.
 date: 2020-01-16
 layout: single
 keywords: ["Security", "Privacy"]
@@ -38,4 +38,4 @@ The data from our devicess is as valuable to us as it is to our users, so we tak
 * Secure Boot: Validate the Integrity and Authenticity of the Runtime Binary During Boot
 
 
-Read more about encryption of data to/from our devices in [Device Management](/device-management) and [M0V Server](/m0v-server)
+Read more about encryption of data to/from our devices in [Device Management](/device-management) and [B00M Server](/m0v-server)

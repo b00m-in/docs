@@ -38,7 +38,7 @@ sudo ./node-webkit/nw
 
 Once running, follow instructions in Section 3.4 of [Getting Started][] with CC3220S to use Uniflash to flash signed images onto the device's storage.
 
-When flashing a secure device like CC3220S, a certificate (and associated private key) is required. This certificate must be signed by a CA whose certificate in turn must be signed by a Trusted Root CA whose certificate is on the limited list of common trusted root CAs used by TI. See [Lets Encrypt][] and [M0V Server][] for details about cerificate generation. 
+When flashing a secure device like CC3220S, a certificate (and associated private key) is required. This certificate must be signed by a CA whose certificate in turn must be signed by a Trusted Root CA whose certificate is on the limited list of common trusted root CAs used by TI. See [Lets Encrypt][] and [B00M Server][] for details about cerificate generation. 
 
 ## Gotchas
 
@@ -49,4 +49,4 @@ As per the problem related in [sntp][], the service pack needs to be included wh
 [sntp]: https://e2e.ti.com/support/wireless-connectivity/wifi/f/968/t/829406?tisearch=e2e-quicksearch&keymatch=sntp
 [Download]: http://processors.wiki.ti.com/index.php/Category:CCS_UniFlash
 [Lets Encrypt]: /tools/letsencrypt
-[M0V Server]: /server/encrypt
+[B00M Server]: /server/encrypt

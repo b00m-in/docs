@@ -1,7 +1,7 @@
 ---
 title: Get Started
 linktitle: Get Started Overview
-description: Quick start and guides for installing M0V.
+description: Quick start and guides for installing B00M.
 date: 2020-01-17
 publishdate: 2020-01-17
 lastmod: 2020-01-17
@@ -17,7 +17,7 @@ aliases: [/overview/introduction/]
 toc: false
 ---
 
-If you have or are planning to have a grid tied PV system installed, M0V can be obtained free of cost by [registering](register) and providing details about your system. You can also use [learning resources][] to learn about M0V.
+If you have or are planning to have a grid tied PV system installed, B00M can be obtained free of cost by [registering](register) and providing details about your system. You can also use [learning resources][] to learn about B00M.
 
 [register]: https://m0v.in/register
 [learning resources]: /getting-started/learning-resources/

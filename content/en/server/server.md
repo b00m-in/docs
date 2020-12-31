@@ -1,5 +1,5 @@
 ---
-title: M0V server
+title: B00M server
 linktitle: Server
 date: 18th May 2019
 publishdate: 2019-05-18

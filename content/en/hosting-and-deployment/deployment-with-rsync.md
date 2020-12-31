@@ -1,7 +1,7 @@
 ---
 title: Deployment to GCP
 linktitle: Deployment to GCP
-description: Deploy M0V server to GCP. 
+description: Deploy B00M server to GCP. 
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2019-10-03

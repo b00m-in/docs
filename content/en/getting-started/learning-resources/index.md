@@ -1,7 +1,7 @@
 ---
 title: Learning Resources
 linktitle: Learning Resources
-description: A list of links on topics related to M0V.
+description: A list of links on topics related to B00M.
 date: 2020-01-17
 publishdate: 2020-01-17
 lastmod: 2020-01-17

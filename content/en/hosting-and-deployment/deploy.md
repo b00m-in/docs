@@ -1,7 +1,7 @@
 ---
 title: Deploy
 linktitle: Deploy
-description: Deploy M0V server to GCP/AWS/Azure.
+description: Deploy B00M server to GCP/AWS/Azure.
 date: 2019-05-30
 publishdate: 2019-05-30
 lastmod: 2019-05-30
