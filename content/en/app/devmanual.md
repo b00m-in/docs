@@ -1,7 +1,7 @@
 ---
-title: Smart Config
-linktitle: Smart Config
-description: B00M uses TI's SmartConfig provisioning.
+title: Developer Manual
+linktitle: Developer Manual
+description: B00M uses TI's Simplelink AP provisioning.
 date: 2020-01-18
 publishdate: 2020-01-18
 lastmod: 2020-01-18
@@ -17,15 +17,34 @@ aliases: [/app/prov/, /app/smartconfig]
 toc: true
 ---
 
-SmartConfig is not used in ordinary provisioning scenarios. 
-
 ### Provisioning Process
 
-The device starts up in [AP][] mode and receives from the mobile app the SSID/password of the WiFi router to which it should connect. When the device connects to the WiFi router, its broadcast can be detected by the mobile phone app on the router as the mobile phone also connects to the router after it sends the SSID/password of the router to the device. On most modern WiFi routers this should work. 
+Please see the [User Manual](/app/usermanual) for step-by-step instructions on using the app.
+
+Briefly, the device starts up in Access Point (AP) mode and receives from the mobile app the SSID/password of the WiFi router to which it should connect. When the device connects to the WiFi router, its broadcast can be detected by the mobile phone app on the router as the mobile phone also connects to the router after it sends the SSID/password of the router to the device. On most modern WiFi routers this should work. 
 
 ### SmartConfig
 
-SmartConfig is a specific type of provisioning which is used in B00M only if the provisioning process as described above fails for whatever reason (usually because of the WiFi router blocking broadcasts). In SmartConfig, the device listens to communication between the mobile phone and the WiFi router and retrieves the SSID/password of the WiFi router using a [covert channel][].   
+SmartConfig is not used in ordinary provisioning scenarios. 
+
+SmartConfig is a specific type of provisioning which is used in B00M only if the provisioning process as described above fails for whatever reason (usually because of the WiFi router blocking MDNS broadcasts). In SmartConfig, the device listens to communication between the mobile phone and the WiFi router and retrieves the SSID/password of the WiFi router using a [covert channel][].   
+
+### Android 10
+
+The starting point for this app is [WIFI-STARTER-PRO-ANDROID-SOURCE][] but the following changes have been made to it:
+
+When targetting Android SDK versions >= 29, the following classes used in the app are deprecated:
+
+```
+android.net.ConnectivityManager.getActiveNetworkInfo()
+android.net.Network.getType()
+android.os.Environment.getExternalStorageDirectory()
+android.net.wifi.WifiConfiguration
+```
+
+Now when connecting to a local Wifi AP (without internet) such as a new Simplelink device, a `WifiNetworkSpecifier.Builder` must now be used along with a `NetworkRequest.Builder` which results in a dialog prompting the user to pick the local Wifi AP to use with the app. 
+
+When connecting to a Wifi AP with internet capability, a `List<WifiNetworkSuggestion>` can be added to `WifiManager.addNetworkSuggestion(...)` prior to making a `NetworkRequest`. The SSID/PSWD of the Wifi AP can be supplied when building the `WifiNetworkSuggestion`
 
 ### [Components](#components){#components}
 
@@ -35,7 +54,12 @@ Android annotations (org.androidannotations.annotations)
 
 Android apps start in a class specified in `AndroidManifest.xml`. In this app `MainActivity` is this class. 
 
+This Activity checks whether the required permissions are granted to the app and if not prompts the user via dialogs for said permissions. It then displays the `Help` screens.  It then creates the android.support.v4.app.FragmentTabHost and the individual `android.widget.TabWidget`s. Both the `support` libraries and `TabWidget` have been deprecated so need to be replaced. 
+
+
 #### [DeviceConfiguration](#deviceconfig){#deviceconfig}
+
+`DeviceConfiguration` is the class where  most of the logic is contained. 
 
 Relvant code path in succesful device configuration :  
 
@@ -94,6 +118,11 @@ public class DeviceConfiguration extends Fragment {
     }
 }
 {{< /code >}}
+
+#### [Settings](#settings){#settings}
+
+The `Settings` tab contains the `Login/Settings` fragments and once logged in, the ability to email logs.
+
 #### [ExternalConfirmation](#extconf){#extconf}
 
 ### [Gotchas](#gotchas){#gotchas}
@@ -106,10 +135,49 @@ android {
 }
 {{< /code >}}
 
+When calling `builder.build().getEncodedQuery` on the `android.net.Uri.Builder`, the builder needs to be populated with something like `builder.appendQueryParameter(...)` prior to calling builder.build() so that when building, the builder isn't null.
+
+Following error may be encountered Android 10 onwards if Location permission hasn't been granted to the app:
+```
+E WifiService: Permission violation - getScanResults not allowed for uid=10022, packageName=com.google.android.gms, reason=java.lang.SecurityException: Location mode is disabled for the device
+```
+Wifi scans now require Location permissions! Fixed with toggling "Access my location" under Settings->Location.
+
+Only during the provisioning process, the communication between the provisioning app and the B00MIN-SL device is in clear text. Android 10 onwards requires all communication to be encrypted. All communication between the app/device and the wider internet is encrypted so that's not an issue. But to facilitate the clear text between the app and the device while provisioning, the following needs to be added to `AndroidManifest.xml`
+```
+<application> android:usesCleartextTraffic="true" >
+```
+
+The following errors still occur and needs resolution: 
+```
+E InputDispatcher: Window handle Window{850d188 u0 <package-name>/<package-name>.MainActivity_} has no registered input channel
+```
+Another error to do with non-SDK interfaces (certain fields have been made private since Android 10) 
+```
+02-07 20:57:20.436  6042  6042 W 00m.smartconfi: Accessing hidden field Landroid/net/ConnectivityManager;->mService:Landroid/net/IConnectivityManager; (greylist-max-p, reflection, denied)
+02-07 20:57:20.436  6042  6042 W System.err: java.lang.NoSuchFieldException: No field mService in class Landroid/net/ConnectivityManager; (declaration of 'android.net.ConnectivityManager' appears in /system/framework/framework.jar!classes2.dex)                                                                         
+```
+#### [grant-uri-permission](){}
+
+A work-around is required for `android.support.v4.content.FileProvider`. Even if the `FileProvider` is granted Uri permissions using the [grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element) element in `AndroidManifest.xml`, it doesn't function in the same way Android 10 onwards. The following error is encountered.
+
+```
+02-07 12:59:14.958 10340 10377 E DatabaseUtils: Writing exception to parcel                                                                    
+02-07 12:59:14.958 10340 10377 E DatabaseUtils: java.lang.SecurityException: Permission Denial: reading android.support.v4.content.FileProvider uri content://<package-name>.fileprovider/external_files/Android/data/in.b00m.smartconfig/files/logs/log.txt from pid=10875, uid=1000 requires the provider be exported, or grantUriPermission() 
+02-07 12:59:14.958 10340 10377 E DatabaseUtils:         at android.content.ContentProvider.enforceReadPermissionInner(ContentProvider.java:729)                                                       
+02-07 12:59:14.958 10340 10377 E DatabaseUtils:         at android.content.ContentProvider$Transport.enforceReadPermission(ContentProvider.java:602)                                                   
+02-07 12:59:14.958 10340 10377 E DatabaseUtils:         at android.content.ContentProvider$Transport.query(ContentProvider.java:231)                  
+02-07 12:59:14.958 10340 10377 E DatabaseUtils:         at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:104)
+02-07 12:59:14.958 10340 10377 E DatabaseUtils:         at android.os.Binder.execTransactInternal(Binder.java:1021)                                                                                       
+02-07 12:59:14.958 10340 10377 E DatabaseUtils:         at android.os.Binder.execTransact(Binder.java:994)                                                                                            
+```
+The temporary work-around to this involves getting a list of `ResolveInfo` from `queryIntentActivities(...)` and granting each matching package Uri permission by calling `Context.grantUriPermission(packageName, path, Intent.FLAG_GRANT_WRITE_URI_PERMISSION)`
+
 ### [References](#references){#references}
-+ [WIFI-STARTER-PRO-ANDROID-SOURCE](http://www.ti.com/tool/wifistarterpro)
-+ [](https://) 
-+ [](https://)
+
++ [android.os.Environment](https://developer.android.com/reference/android/os/Environment?hl=en#getExternalStorageDirectory())
+
+[WIFI-STARTER-PRO-ANDROID-SOURCE]: http://www.ti.com/tool/wifistarterpro
 
 ### [Appendix](#appendix){#appendix}
 
@@ -191,6 +259,5 @@ Pass len: 8
 ""2019-06-01 13:49:15,756 INFO  [c.t.s.MainActivity]-[782] Ping - stopped
 ""2019-06-01 13:49:15,767 INFO  [c.t.s.MainActivity]-[801] PB - Completed
 ```
-
 
 [covert channel]: https://crypto.stackexchange.com/questions/10977/encoding-information-in-packet-lengths-to-actively-sidestep-encryption/11170#11170
