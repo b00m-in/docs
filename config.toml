@@ -66,11 +66,11 @@ twitter = "B00MIN"
   ## Setting this to true will add a "noindex" to *EVERY* page on the site
   removefromexternalsearch = false
   ## Gh repo for site footer (include trailing slash)
-  ghrepo = "https://github.com/m0vin/m0v-docs/"
+  ghrepo = "https://github.com/b00m-in/docs/"
   ## GH Repo for filing a new issue
-  github_repo = "https://github.com/m0vin/m0v-server/issues/new"
+  github_repo = "https://github.com/b00m-in/gin/issues/new"
   ### Edit content repo (set to automatically enter "edit" mode; this is good for "improve this page" links)
-  ghdocsrepo = "https://github.com/m0vin/m0v-docs/tree/master/docs"
+  ghdocsrepo = "https://github.com/b00m-in/docs/tree/master/docs"
   ## Gitter URL
   ## gitter = "https://gitter.im/m0v/m0v"
   ## Discuss Forum URL

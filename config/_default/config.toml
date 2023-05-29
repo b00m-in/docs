@@ -7,7 +7,8 @@ footnotereturnlinkcontents = "↩"
 languageCode = "en-us"
 title = "B00M"
 
-#googleAnalytics ="UA-23840640-2"
+enableRobotsTXT = true
+googleAnalytics = "UA-23840640-2"
 
 pluralizeListTitles = false
 
@@ -70,7 +71,7 @@ weight = 10
 pattern = "2006"
 
 [social]
-twitter = "B00min"
+#twitter = "GoHugoIO"
 
 
 # MARKDOWN

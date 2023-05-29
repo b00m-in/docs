@@ -1,42 +1,38 @@
 {{ define "main" }}
-
 <div class="w-100 h-100">
-  <div id="map" class="w-100 min-vh-100"> 
-
-    <script src="/static/pubapp.js"></script>
-    <!--<script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of Uluru
-      var bengaluru = {lat: 12.95, lng: 77.6};
-      var b1 = {lat: 12.955, lng: 77.65};
-      var b2 = {lat: 12.945, lng: 77.55};
-      var b2 = {lat: 12.95, lng: 77.6};
-      var b4 = {lat: 12.95, lng: 77.6};
-      var b5 = {lat: 12.95, lng: 77.6};
-      var b6 = {lat: 12.95, lng: 77.6};
-      var b7 = {lat: 12.95, lng: 77.6};
-      var b8 = {lat: 12.95, lng: 77.6};
-      var b9 = {lat: 12.95, lng: 77.6};
-      var b10 = {lat: 12.95, lng: 77.6};
-      var b11 = {lat: 12.95, lng: 77.6};
-      var b12 = {lat: 12.95, lng: 77.6};
-      // The map, centered at Uluru
-      var map = new google.maps.Map(
-          document.getElementById('map'), {
-            zoom: 12,
-            center: bengaluru,
-            zoomControl: false
-        });
-      var m1 = new google.maps.Marker({position: b1, map: map});
-      var m2 = new google.maps.Marker({position: b2, map: map});
-    }
-    </script>-->
-    <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
-    </script>
-
-
-  </div>
+    <div id="map" class="w-100 min-vh-100"> 
+        <script src="/static/pubapp.js"></script>
+        <!--<script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          var bengaluru = {lat: 12.95, lng: 77.6};
+          var b1 = {lat: 12.955, lng: 77.65};
+          var b2 = {lat: 12.945, lng: 77.55};
+          var b2 = {lat: 12.95, lng: 77.6};
+          var b4 = {lat: 12.95, lng: 77.6};
+          var b5 = {lat: 12.95, lng: 77.6};
+          var b6 = {lat: 12.95, lng: 77.6};
+          var b7 = {lat: 12.95, lng: 77.6};
+          var b8 = {lat: 12.95, lng: 77.6};
+          var b9 = {lat: 12.95, lng: 77.6};
+          var b10 = {lat: 12.95, lng: 77.6};
+          var b11 = {lat: 12.95, lng: 77.6};
+          var b12 = {lat: 12.95, lng: 77.6};
+          // The map, centered at Uluru
+          var map = new google.maps.Map(
+              document.getElementById('map'), {
+                zoom: 12,
+                center: bengaluru,
+                zoomControl: false
+            });
+          var m1 = new google.maps.Marker({position: b1, map: map});
+          var m2 = new google.maps.Marker({position: b2, map: map});
+        }
+        </script>-->
+        <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
+        </script>
+    </div>
 </div>
 {{ end }}

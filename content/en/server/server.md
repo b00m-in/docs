@@ -1,11 +1,11 @@
 ---
-title: B00M server
-linktitle: Server
+title: Broker
+linktitle: Broker
 date: 18th May 2019
 publishdate: 2019-05-18
-lastmod: 2017-02-01
+lastmod: 2023-04-06
 categories: [go, encryption]
-keywords: [server, certificates]
+keywords: [server, certificates, broker]
 menu:
   docs:
     parent: "server"
@@ -13,18 +13,18 @@ menu:
 weight: 20
 sections_weight: 20
 draft: false
-aliases: [/server/server]
+aliases: [/server/broker]
 toc: true
 ---
 
-### Brief
+### Brief  
 
-A secure (tls) tcp server to receive status/meter readings with postgresql database to store readings. Server uses acme for auto-generation and renewal of certificates.
+A secure (tls) tcp server to receive status/meter readings with postgresql database to store readings. Uses acme for auto-generation and renewal of certificates.
 
-The server is one part of four:
+The broker is one part of four:
 
 + Data receipt server/broker (this) - `locomov` [m0v-broker](https://github.com/m0vin/m0v-broker)
-+ Data retrieval server - `finisher` [m0v-server](https://github.com/m0vinr/m0v-server)
++ Data retrieval server - `finisher` [m0v-server](https://github.com/m0vin/m0v-server)
 + Device firmware - `provisioning_CC3220S_LAUNCHXL_tirtos_ccs` [m0v-cc3220s](https://github.com/m0vin/m0v-cc3220s)
 + Android app software - `SimpleLink_WiFi_Provisioning_Android_Source_2.2.257` [mov-app-android](htps://github.com/m0vin/m0v-app-android)
 
@@ -35,11 +35,10 @@ The server is one part of four:
 Stdout/stderr is piped to a modified version of funnel which writes and rotates log files. 
 
 ```
-./mov-server -stderrthreshold=INFO -secure -dbdb=m0v -dbuser=sridhar -dbpw= 2>&1 | funnel -app=mov &
-./mov-confo-server -stderrthreshold=INFO -secure -dbdb=m0v -dbuser=sridhar -dbpw= 2>&1 | funnel -app=confo &
+./broker -stderrthreshold=INFO -secure -dbdb=m0v -dbuser=*** -dbpw=*** 2>&1 | funnel -app=broker &
 ``` 
 
-`mov-confo-server has been deprecated by a handler in the data retrieval server `finisher` because  `mov-confo-server` consisted of only a single https handler for the retrieval of the hash of a newly configured device using `device_name` and `ssid`.
+Note: `mov-confo-server has been deprecated by a handler in the data retrieval server `b00m-in/gin` because  `mov-confo-server` consisted of only a single https handler for the retrieval of the hash of a newly configured device using `device_name` and `ssid`.
 
 #### [data](#data){#data}
 
@@ -96,7 +95,7 @@ type Confo struct {
 }
 {{< /code >}}
 
-On receiving a confo, the server does the following: 
+On receiving a confo, the broker does the following: 
 - check if `Sub` is known, i.e. registered email in `sub`
     - yes: check if `Hash` exists in `pub`
         - yes: check if `Sub.Id` == `creator` in `pub`
