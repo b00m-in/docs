@@ -22,8 +22,8 @@ lineNumbersInTable = true
 noClasses = false
 
 [outputs]
-home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
-section = [ "HTML", "RSS"]
+home = [ "HTML", "RSS", "REDIR", "HEADERS", "JSON" ]
+section = [ "HTML", "RSS", "JSON"]
 
 [mediaTypes]
 [mediaTypes."text/netlify"]

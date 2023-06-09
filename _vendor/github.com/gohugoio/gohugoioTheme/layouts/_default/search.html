@@ -1,0 +1,118 @@
+{{ define "main" }}
+  <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
+    <div class="flex-l">
+
+      <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
+      {{- partial "toc.html" . -}}
+      </div>
+
+      <div class="order-1 w-60-l mw7 ph0 ph5-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns" style="flex-grow:1;">
+        <div class="documentation-copy center measure-wide-l">
+          <div id="readout" class="fixed right-0 bottom-0">
+          </div>
+            <div>
+                <input id="search-input-act" type="text" placeholder="search terms"/>
+                <button id="search-button" type="submit" onclick=search()>Search</button>
+            </div>
+            <p id="search-results">
+            </p>
+          {{ partial "related.html" . }}
+        </div>
+      </div>
+      <div class="order-0 w-20 dn db-l">
+        {{ partial "nav-links-docs.html" . }}
+      </div>
+
+    </div>
+  </article>
+
+  <div class="w-100 bg-light-gray">
+    <div class="mw7 pa4 center nested-lh-copy lh-copy">
+      {{ partial "docs/page-meta-data.html" . }}
+      {{ partial "page-edit.html" . }}
+      {{ partial "tags.html" . }}
+    </div>
+  </div>
+<script src="/typesense.min.js"></script>
+<script defer>
+    //console.log('number of forms: ' + document.forms.length);
+    //console.log('number of inputs: ' + document.querySelectorAll("input").length);
+    //document.querySelectorAll("input").forEach(result => {
+    //    console.log(result.nodeName + ' ' + result.id);
+    //});
+    // Get the input field
+    var input = document.getElementById("search-input-act");
+
+    // Execute a function when the user presses a key on the keyboard
+    input.addEventListener("keypress", function(event) {
+      // If the user presses the "Enter" key on the keyboard
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        //document.getElementById("search-button").click();
+        search();
+      }
+    }); 
+
+  /*
+   Setup: See clientInitalization.js for quick instructions on starting the Typesense server.
+  */
+
+  // Create a client
+  // We're using Typesense.Client instead of Typesense.SearchClient just for the purposes of this example, so we can index using the same client
+  // You'd typically want to use Typesense.SearchClient in the browser, if you only need to perform search operations
+    var typesense = new Typesense.Client({
+        'nodes': [
+          {
+            'host': 'ev.m0v.in',
+            //'port': '443',
+            'pathname': '/search',
+            'protocol': 'https'
+          }/*,
+          {
+            'host': 'localhost',
+            'port': '7108',
+            'protocol': 'http'
+          },
+          {
+            'host': 'localhost',
+            'port': '9108',
+            'protocol': 'http'
+          }*/],
+        'apiKey': 'abc123',
+        'numRetries': 3, // A total of 4 tries (1 original try + 3 retries)
+        'connectionTimeoutSeconds': 10,
+        'retryIntervalSeconds': 0.1,
+        'healthcheckIntervalSeconds': 2,
+        'logLevel': 'debug'
+    })
+
+    function search () {
+        var searchTerm = document.getElementById('search-input-act').value
+        console.log('search term: ' + searchTerm);
+        typesense.collections('notes').documents().search({
+          'q': searchTerm,
+          'query_by': 'content_html',
+          'num_typos': '0',
+        }).then(function (searchResults) {
+          let temp = '<ul>';
+          searchResults.hits.forEach(result => {
+            let link = result.document.url.replace(/http/gi, 'https').replace(/localhost:9090/gi,'ev.m0v.in')
+            temp += '<li><a href="' + result.document.url.replace(/http/gi, 'https').replace(/localhost:9090/gi,'ev.m0v.in') + '"<a>' + link + '</a> ==> ';
+            console.log(temp);
+            let temp1 = result.highlight.content_html.snippet.replace(/\n/g, '').replace(/<\/?[^>]+>/gi, '');
+            // + result.highlight.content_html.snippet.slice(0,30) + '</li>'
+            temp += temp1 + '</li>';
+          });
+          temp += '</ul>';
+          document.getElementById('search-results').innerHTML = temp
+          //document.getElementById('search-results').innerHTML = JSON.stringify(searchResults, null, 2)
+        }).catch(function (error) {
+          document.getElementById('search-results').innerHTML = error
+        })
+    }
+
+</script>
+
+{{ end }}
