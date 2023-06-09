@@ -22,7 +22,7 @@ lineNumbersInTable = true
 noClasses = false
 
 [outputs]
-home = [ "HTML", "RSS", "REDIR", "HEADERS", "JSON" ]
+home = [ "HTML", "RSS", "REDIR", "HEADERS"]
 section = [ "HTML", "RSS", "JSON"]
 
 [mediaTypes]
