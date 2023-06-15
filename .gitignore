@@ -1,0 +1,5 @@
+*.swp
+public/
+publiclink/
+log/
+.hugo_build.lock

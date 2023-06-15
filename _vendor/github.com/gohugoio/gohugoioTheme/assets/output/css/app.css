@@ -4083,7 +4083,7 @@ img { max-width: 100%; }
     max-width: 30em;
   }
   .measure-wide-l {
-    max-width: 34em;
+    max-width: 40em;
   }
   .measure-narrow-l {
     max-width: 20em;
@@ -5130,13 +5130,13 @@ code, .code, pre code, .highlight pre  {
   
   [data-scrolldir="down"] .sticky {
     position: fixed;
-    top:100px;
+    /*top:100px;*/
     right:0;
   }
 
   [data-scrolldir="up"] .sticky {
     position: fixed;
-    top:100px;
+    /*top:100px;*/
     right:0;
   }
 }
